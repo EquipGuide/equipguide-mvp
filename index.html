@@ -259,6 +259,59 @@
       color: #ffd500;
       letter-spacing: 2px;
     }
+    `.muscles-card {
+  background: #111;
+  border: 1px solid #2d2d2d;
+  border-radius: 18px;
+}
+
+.muscles-intro {
+  color: #bdbdbd;
+  line-height: 1.6;
+  margin: 10px 0 24px;
+}
+
+.muscle-detail {
+  background: #1a1a1a;
+  border-radius: 14px;
+  padding: 16px;
+  margin-bottom: 18px;
+  border-left: 5px solid #ffd500;
+}
+
+.muscle-detail h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+
+.muscle-detail h3 span {
+  color: #ffd500;
+}
+
+.muscle-detail p {
+  margin: 0 0 12px;
+  color: #d0d0d0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.muscle-bar {
+  width: 100%;
+  height: 12px;
+  background: #2b2b2b;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.muscle-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg,#fff176,#ffd500,#ffb300);
+}
+
+.chest-fill { width: 100%; }
+.triceps-fill { width: 65%; }
+.shoulder-fill { width: 55%; }`
   </style>
 </head>
 
@@ -396,29 +449,49 @@
     </div>
 
 
-    <div id="muscles" class="section">
+  
+<div id="muscles" class="section">
 
-      <div class="card">
+  <div class="card muscles-card">
+    <h2>MUSCLES WORKED</h2>
 
-        <h2>MUSCLES WORKED</h2>
+    <p class="muscles-intro">
+      The chest press primarily targets your chest, with additional activation in your triceps and front shoulders.
+    </p>
 
-        <div class="muscle">
-          <strong>Primary:</strong> Chest
-        </div>
-
-        <div class="muscle">
-          <strong>Secondary:</strong> Triceps
-        </div>
-
-        <div class="muscle">
-          <strong>Secondary:</strong> Front Shoulders
-        </div>
-
+    <div class="muscle-detail">
+      <h3><span>Primary:</span> Pectoralis Major (Chest)</h3>
+      <p>
+        Main muscle worked. The chest press strengthens and builds your pectoralis major, helping with upper-body strength and pushing movements.
+      </p>
+      <div class="muscle-bar">
+        <div class="muscle-fill chest-fill"></div>
       </div>
-
     </div>
 
+    <div class="muscle-detail">
+      <h3><span>Secondary:</span> Triceps Brachii (Triceps)</h3>
+      <p>
+        Assists the pressing movement by extending the elbows as you push the handles forward.
+      </p>
+      <div class="muscle-bar">
+        <div class="muscle-fill triceps-fill"></div>
+      </div>
+    </div>
 
+    <div class="muscle-detail">
+      <h3><span>Secondary:</span> Anterior Deltoid (Front Shoulders)</h3>
+      <p>
+        Assists the chest during the pressing movement and helps move the upper arm forward.
+      </p>
+      <div class="muscle-bar">
+        <div class="muscle-fill shoulder-fill"></div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
     <div id="tips" class="section">
 
       <div class="card">
