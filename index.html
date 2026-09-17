@@ -6,606 +6,159 @@
   <title>EquipGuide - Chest Press</title>
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #0a0a0a;
-      color: white;
-    }
-
-    .header {
-      background: #050505;
-      border-bottom: 1px solid #222;
-      padding: 18px;
-      text-align: center;
-    }
-
-    .eg {
-      display: inline-block;
-      background: #ffd500;
-      color: black;
-      font-weight: 900;
-      font-size: 26px;
-      padding: 7px 10px;
-      border-radius: 7px;
-      margin-right: 6px;
-    }
-
-    .brand {
-      font-size: 24px;
-      font-weight: 900;
-    }
-
-    .brand span {
-      color: #ffd500;
-    }
-
-    .slogan {
-      margin-top: 7px;
-      color: #ffd500;
-      font-size: 11px;
-      letter-spacing: 3px;
-      font-weight: bold;
-    }
-
-    .container {
-      max-width: 700px;
-      margin: auto;
-      padding: 22px 18px 50px;
-    }
-
-    .category {
-      color: #ffd500;
-      font-size: 12px;
-      font-weight: bold;
-      letter-spacing: 1.5px;
-      margin-top: 10px;
-    }
-
-    h1 {
-      font-size: 40px;
-      margin: 8px 0 4px;
-    }
-
-    .tagline {
-      color: #aaa;
-      margin-bottom: 24px;
-    }
-
-    .video {
-      background: #171717;
-      border: 1px solid #333;
-      border-radius: 18px;
-      overflow: hidden;
-      margin-bottom: 25px;
-    }
-
-    .video-top {
-      padding: 14px;
-      font-size: 13px;
-      font-weight: bold;
-    }
-
-    .video-screen {
-      height: 230px;
-      background: linear-gradient(135deg, #262626, #101010);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .play {
-      width: 74px;
-      height: 74px;
-      border-radius: 50%;
-      background: #ffd500;
-      color: black;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 30px;
-      padding-left: 5px;
-    }
-
-    .video-text {
-      margin-top: 14px;
-      color: #bbb;
-      font-size: 13px;
-    }
-
-    .tabs {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 5px;
-      margin-bottom: 20px;
-    }
-
-    .tab {
-      padding: 12px 4px;
-      background: #161616;
-      border: 1px solid #292929;
-      color: #aaa;
-      border-radius: 8px;
-      font-size: 12px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    .tab.active {
-      background: #ffd500;
-      color: black;
-    }
-
-    .section {
-      display: none;
-    }
-
-    .section.active {
-      display: block;
-    }
-
-    .card {
-      background: #141414;
-      border: 1px solid #2c2c2c;
-      border-radius: 16px;
-      padding: 18px;
-      margin-bottom: 14px;
-    }
-
-    .card h2 {
-      margin-top: 0;
-      font-size: 18px;
-      color: #ffd500;
-    }
-
-    .step {
-      display: flex;
-      gap: 14px;
-      margin: 18px 0;
-    }
-
-    .number {
-      min-width: 34px;
-      height: 34px;
-      border-radius: 50%;
-      background: #ffd500;
-      color: black;
-      font-weight: 900;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .step strong {
-      display: block;
-      margin-bottom: 4px;
-    }
-
-    .step p {
-      margin: 0;
-      color: #bbb;
-      line-height: 1.5;
-      font-size: 14px;
-    }
-
-    .muscle {
-      background: #202020;
-      padding: 14px;
-      border-radius: 10px;
-      margin: 9px 0;
-    }
-
-    .muscle strong {
-      color: #ffd500;
-    }
-
-    .tip {
-      padding: 12px 0;
-      border-bottom: 1px solid #2a2a2a;
-      color: #ddd;
-    }
-
-    .tip:last-child {
-      border-bottom: none;
-    }
-
-    .safety {
-      border-left: 4px solid #ffd500;
-      padding: 15px;
-      background: #1b1b1b;
-      border-radius: 8px;
-      color: #ddd;
-      line-height: 1.5;
-    }
-
-    .buttons {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-      margin-top: 22px;
-    }
-
-    .button {
-      padding: 15px 8px;
-      border-radius: 10px;
-      border: 1px solid #444;
-      background: #171717;
-      color: white;
-      text-align: center;
-      font-weight: bold;
-      font-size: 13px;
-    }
-
-    .button.yellow {
-      background: #ffd500;
-      color: black;
-      border: none;
-    }
-
-    footer {
-      text-align: center;
-      border-top: 1px solid #222;
-      padding: 35px 20px;
-      color: #777;
-      font-size: 12px;
-    }
-
-    footer strong {
-      color: #ffd500;
-      letter-spacing: 2px;
-    }
-    `muscles-card {
-  background: #111;
-  border: 1px solid #2d2d2d;
-  border-radius: 18px;
-}
-
-.muscles-intro {
-  color: #bdbdbd;
-  line-height: 1.6;
-  margin: 10px 0 24px;
-}
-
-.muscle-detail {
-  background: #1a1a1a;
-  border-radius: 14px;
-  padding: 16px;
-  margin-bottom: 18px;
-  border-left: 5px solid #ffd500;
-  overflow: hidden;
-  display: grid;
-  grid-template-columns: 110px minmax(0, 1fr);
-  grid-template-areas:
-    "image heading"
-    "image text"
-    "bar bar";
-  column-gap: 14px;
-  row-gap: 8px;
-  align-items: start;
-}
-
-.muscle-detail h3 {
-  grid-area: heading;
-  margin: 0 0 8px;
-  font-size: 16px;
-}
-
-.muscle-detail h3 span {
-  color: #ffd500;
-}
-
-.muscle-detail p {
-  grid-area: text;
-  margin: 0 0 12px;
-  color: #d0d0d0;
-  font-size: 14px;
-  line-height: 1.5;
-}
-
-.muscle-bar {
-  grid-area: bar;
-  width: 100%;
-  height: 12px;
-  background: #2b2b2b;
-  border-radius: 999px;
-  overflow: hidden;
-  margin-top: 4px;
-}
-
-.muscle-fill {
-  height: 100%;
-  border-radius: 999px;
-  background: linear-gradient(90deg,#fff176,#ffd500,#ffb300);
-}
-
-.chest-fill { width: 100%; }
-.triceps-fill { width: 65%; }
-.shoulder-fill { width: 55%; }
-
-.muscle-image {
-  grid-area: image;
-  width: 100%;
-  height: auto;
-  display: block;
-  box-sizing: border-box;
-  border-radius: 12px;
-  margin: 0;
-}
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Arial, Helvetica, sans-serif; background: #0a0a0a; color: white; }
+    .header { background: #050505; border-bottom: 1px solid #222; padding: 14px 18px; text-align: center; }
+    .site-logo { width: 220px; max-width: 75vw; height: auto; display: block; margin: 0 auto; }
+    .container { max-width: 700px; margin: auto; padding: 22px 18px 50px; }
+    .category { color: #ffd500; font-size: 12px; font-weight: bold; letter-spacing: 1.5px; margin-top: 10px; }
+    h1 { font-size: 40px; margin: 8px 0 4px; }
+    .tagline { color: #aaa; margin-bottom: 24px; }
+    .video { background: #171717; border: 1px solid #333; border-radius: 18px; overflow: hidden; margin-bottom: 25px; }
+    .video-top { padding: 14px; font-size: 13px; font-weight: bold; }
+    .video-screen { height: 230px; background: linear-gradient(135deg, #262626, #101010); display: flex; flex-direction: column; align-items: center; justify-content: center; }
+    .play { width: 74px; height: 74px; border-radius: 50%; background: #ffd500; color: black; display: flex; align-items: center; justify-content: center; font-size: 30px; padding-left: 5px; }
+    .video-text { margin-top: 14px; color: #bbb; font-size: 13px; }
+    .tabs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 5px; margin-bottom: 20px; }
+    .tab { padding: 12px 4px; background: #161616; border: 1px solid #292929; color: #aaa; border-radius: 8px; font-size: 12px; font-weight: bold; cursor: pointer; }
+    .tab.active { background: #ffd500; color: black; }
+    .section { display: none; }
+    .section.active { display: block; }
+    .card { background: #141414; border: 1px solid #2c2c2c; border-radius: 16px; padding: 18px; margin-bottom: 14px; }
+    .card h2 { margin-top: 0; font-size: 18px; color: #ffd500; }
+    .step { display: flex; gap: 14px; margin: 18px 0; }
+    .number { min-width: 34px; height: 34px; border-radius: 50%; background: #ffd500; color: black; font-weight: 900; display: flex; align-items: center; justify-content: center; }
+    .step strong { display: block; margin-bottom: 4px; }
+    .step p { margin: 0; color: #bbb; line-height: 1.5; font-size: 14px; }
+    .muscle { background: #202020; padding: 14px; border-radius: 10px; margin: 9px 0; }
+    .muscle strong { color: #ffd500; }
+    .tip { padding: 12px 0; border-bottom: 1px solid #2a2a2a; color: #ddd; }
+    .tip:last-child { border-bottom: none; }
+    .safety { border-left: 4px solid #ffd500; padding: 15px; background: #1b1b1b; border-radius: 8px; color: #ddd; line-height: 1.5; }
+    .buttons { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 22px; }
+    .button { padding: 15px 8px; border-radius: 10px; border: 1px solid #444; background: #171717; color: white; text-align: center; font-weight: bold; font-size: 13px; }
+    .button.yellow { background: #ffd500; color: black; border: none; }
+    footer { text-align: center; border-top: 1px solid #222; padding: 28px 20px 34px; }
+    .muscles-card { background: #111; border: 1px solid #2d2d2d; border-radius: 18px; }
+    .muscles-intro { color: #bdbdbd; line-height: 1.6; margin: 10px 0 24px; }
+    .muscle-detail { background: #1a1a1a; border-radius: 14px; padding: 16px; margin-bottom: 18px; border-left: 5px solid #ffd500; overflow: hidden; display: grid; grid-template-columns: 110px minmax(0, 1fr); grid-template-areas: "image heading" "image text" "bar bar"; column-gap: 14px; row-gap: 8px; align-items: start; }
+    .muscle-detail h3 { grid-area: heading; margin: 0 0 8px; font-size: 16px; }
+    .muscle-detail h3 span { color: #ffd500; }
+    .muscle-detail p { grid-area: text; margin: 0 0 12px; color: #d0d0d0; font-size: 14px; line-height: 1.5; }
+    .muscle-bar { grid-area: bar; width: 100%; height: 12px; background: #2b2b2b; border-radius: 999px; overflow: hidden; margin-top: 4px; }
+    .muscle-fill { height: 100%; border-radius: 999px; background: linear-gradient(90deg,#fff176,#ffd500,#ffb300); }
+    .chest-fill { width: 100%; }
+    .triceps-fill { width: 65%; }
+    .shoulder-fill { width: 55%; }
+    .muscle-image { grid-area: image; width: 100%; height: auto; display: block; box-sizing: border-box; border-radius: 12px; margin: 0; }
   </style>
 </head>
-
 <body>
-
   <div class="header">
-    <div>
-      <span class="eg">EG</span>
-      <span class="brand"><span>EQUIP</span>GUIDE</span>
-    </div>
-
-    <div class="slogan">
-      TAP. LEARN. TRAIN.
-    </div>
+    <img class="site-logo" src="equipguide-logo.jpg" alt="EquipGuide - Tap Learn Train">
   </div>
-
 
   <div class="container">
-
-    <div class="category">
-      STRENGTH | UPPER BODY
-    </div>
-
+    <div class="category">STRENGTH | UPPER BODY</div>
     <h1>CHEST PRESS</h1>
-
-    <div class="tagline">
-      Build a stronger chest with proper form.
-    </div>
-
+    <div class="tagline">Build a stronger chest with proper form.</div>
 
     <div class="video">
-
-      <div class="video-top">
-        HOW TO USE THE CHEST PRESS
-      </div>
-
+      <div class="video-top">HOW TO USE THE CHEST PRESS</div>
       <div class="video-screen">
         <div class="play">▶</div>
-
         <div class="video-text">
           <video controls preload="metadata" style="width:100%; height:auto; display:block; border-radius:18px;">
-  <source src="30-second-EquipGuide-Chest-Press-instruc.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+            <source src="30-second-EquipGuide-Chest-Press-instruc.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
         </div>
       </div>
-
     </div>
-
 
     <div class="tabs">
-      <button class="tab active" onclick="showTab('instructions', this)">
-        Instructions
-      </button>
-
-      <button class="tab" onclick="showTab('muscles', this)">
-        Muscles
-      </button>
-
-      <button class="tab" onclick="showTab('tips', this)">
-        Tips
-      </button>
-
-      <button class="tab" onclick="showTab('safety', this)">
-        Safety
-      </button>
+      <button class="tab active" onclick="showTab('instructions', this)">Instructions</button>
+      <button class="tab" onclick="showTab('muscles', this)">Muscles</button>
+      <button class="tab" onclick="showTab('tips', this)">Tips</button>
+      <button class="tab" onclick="showTab('safety', this)">Safety</button>
     </div>
-
 
     <div id="instructions" class="section active">
-
       <div class="card">
-
         <h2>SETUP</h2>
-
-        <div class="step">
-          <div class="number">1</div>
-          <div>
-            <strong>Adjust the seat</strong>
-            <p>
-              Set the seat so the handles sit around mid-chest height.
-            </p>
-          </div>
-        </div>
-
-        <div class="step">
-          <div class="number">2</div>
-          <div>
-            <strong>Position yourself</strong>
-            <p>
-              Sit with your back against the pad and your feet flat on the floor.
-            </p>
-          </div>
-        </div>
-
-        <div class="step">
-          <div class="number">3</div>
-          <div>
-            <strong>Grip the handles</strong>
-            <p>
-              Keep your wrists straight and use a comfortable grip.
-            </p>
-          </div>
-        </div>
-
+        <div class="step"><div class="number">1</div><div><strong>Adjust the seat</strong><p>Set the seat so the handles sit around mid-chest height.</p></div></div>
+        <div class="step"><div class="number">2</div><div><strong>Position yourself</strong><p>Sit with your back against the pad and your feet flat on the floor.</p></div></div>
+        <div class="step"><div class="number">3</div><div><strong>Grip the handles</strong><p>Keep your wrists straight and use a comfortable grip.</p></div></div>
       </div>
-
-
       <div class="card">
-
         <h2>PERFORM</h2>
+        <div class="step"><div class="number">1</div><div><strong>Push forward</strong><p>Press the handles forward smoothly without locking your elbows hard.</p></div></div>
+        <div class="step"><div class="number">2</div><div><strong>Return slowly</strong><p>Bring the handles back under control and repeat.</p></div></div>
+      </div>
+    </div>
 
-        <div class="step">
-          <div class="number">1</div>
-          <div>
-            <strong>Push forward</strong>
-            <p>
-              Press the handles forward smoothly without locking your elbows hard.
-            </p>
-          </div>
+    <div id="muscles" class="section">
+      <div class="card muscles-card">
+        <h2>MUSCLES WORKED</h2>
+        <p class="muscles-intro">The chest press primarily targets your chest, with additional activation in your triceps and front shoulders.</p>
+        <div class="muscle-detail">
+          <img class="muscle-image" src="Chest.jpg" alt="Pectoralis Major chest muscle">
+          <h3><span>Primary:</span> Pectoralis Major (Chest)</h3>
+          <p>Main muscle worked. The chest press strengthens and builds your pectoralis major, helping with upper-body strength and pushing movements.</p>
+          <div class="muscle-bar"><div class="muscle-fill chest-fill"></div></div>
         </div>
-
-        <div class="step">
-          <div class="number">2</div>
-          <div>
-            <strong>Return slowly</strong>
-            <p>
-              Bring the handles back under control and repeat.
-            </p>
-          </div>
+        <div class="muscle-detail">
+          <img class="muscle-image" src="triceps-brachii.jpg" alt="Triceps Brachii muscle">
+          <h3><span>Secondary:</span> Triceps Brachii (Triceps)</h3>
+          <p>Assists the pressing movement by extending the elbows as you push the handles forward.</p>
+          <div class="muscle-bar"><div class="muscle-fill triceps-fill"></div></div>
         </div>
-
-      </div>
-
-    </div>
-
-
-  
-<div id="muscles" class="section">
-
-    <div class="card muscles-card">
-
-    <h2>MUSCLES WORKED</h2>
-
-    <p class="muscles-intro">
-      The chest press primarily targets your chest, with additional activation in your triceps and front shoulders.
-    </p>
-
-    <div class="muscle-detail">
-     <img class="muscle-image" src="Chest.jpg" alt="Pectoralis Major chest muscle">
-      <h3><span>Primary:</span> Pectoralis Major (Chest)</h3>
-      <p>
-        Main muscle worked. The chest press strengthens and builds your pectoralis major, helping with upper-body strength and pushing movements.
-      </p>
-      <div class="muscle-bar">
-        <div class="muscle-fill chest-fill"></div>
-      </div>
-    </div>
-<div class="muscle-detail">
-    <<img class="muscle-image" src="triceps-brachii.jpg" alt="Triceps Brachii muscle">
-      <h3><span>Secondary:</span> Triceps Brachii (Triceps)</h3>
-      <p>
-        Assists the pressing movement by extending the elbows as you push the handles forward.
-      </p>
-      <div class="muscle-bar">
-        <div class="muscle-fill triceps-fill"></div>
+        <div class="muscle-detail">
+          <img class="muscle-image" src="Sh.jpg" alt="Anterior Deltoid front shoulder muscle">
+          <h3><span>Secondary:</span> Anterior Deltoid (Front Shoulders)</h3>
+          <p>Assists the chest during the pressing movement and helps move the upper arm forward.</p>
+          <div class="muscle-bar"><div class="muscle-fill shoulder-fill"></div></div>
+        </div>
       </div>
     </div>
 
-    <div class="muscle-detail">
-      <img class="muscle-image" src="Sh.jpg" alt="Anterior Deltoid front shoulder muscle">
-      <h3><span>Secondary:</span> Anterior Deltoid (Front Shoulders)</h3>
-      <p>
-        Assists the chest during the pressing movement and helps move the upper arm forward.
-      </p>
-      <div class="muscle-bar">
-        <div class="muscle-fill shoulder-fill"></div>
-      </div>
-    </div>
-
-  </div>
-
-</div>
     <div id="tips" class="section">
-
       <div class="card">
-
         <h2>QUICK TIPS</h2>
-
-        <div class="tip">
-          ✓ Don't set the seat too high or too low.
-        </div>
-
-        <div class="tip">
-          ✓ Keep your back against the pad.
-        </div>
-
-        <div class="tip">
-          ✓ Avoid flaring your elbows too far out.
-        </div>
-
-        <div class="tip">
-          ✓ Choose a weight you can control.
-        </div>
-
-        <div class="tip">
-          ✓ Don't bounce or slam the weight stack.
-        </div>
-
+        <div class="tip">✓ Don't set the seat too high or too low.</div>
+        <div class="tip">✓ Keep your back against the pad.</div>
+        <div class="tip">✓ Avoid flaring your elbows too far out.</div>
+        <div class="tip">✓ Choose a weight you can control.</div>
+        <div class="tip">✓ Don't bounce or slam the weight stack.</div>
       </div>
-
     </div>
-
 
     <div id="safety" class="section">
-
       <div class="card">
-
         <h2>SAFETY</h2>
-
-        <div class="safety">
-          Use a controllable weight and move smoothly.
-          If you are unsure about the setup or experience pain,
-          stop and ask gym staff for assistance.
-        </div>
-
+        <div class="safety">Use a controllable weight and move smoothly. If you are unsure about the setup or experience pain, stop and ask gym staff for assistance.</div>
       </div>
-
     </div>
-
 
     <div class="buttons">
-
-      <div class="button">
-        REPORT AN ISSUE
-      </div>
-
-      <div class="button yellow">
-        BOOK A TRAINER
-      </div>
-
+      <div class="button">REPORT AN ISSUE</div>
+      <div class="button yellow">BOOK A TRAINER</div>
     </div>
-
   </div>
 
-
   <footer>
-    <strong>TAP. LEARN. TRAIN.</strong>
-    <br><br>
-    EquipGuide
+    <img class="site-logo" src="equipguide-logo.jpg" alt="EquipGuide - Tap Learn Train">
   </footer>
-
 
   <script>
     function showTab(tabName, button) {
-
       const sections = document.querySelectorAll('.section');
-      sections.forEach(section => {
-        section.classList.remove('active');
-      });
-
+      sections.forEach(section => section.classList.remove('active'));
       const tabs = document.querySelectorAll('.tab');
-      tabs.forEach(tab => {
-        tab.classList.remove('active');
-      });
-
+      tabs.forEach(tab => tab.classList.remove('active'));
       document.getElementById(tabName).classList.add('active');
       button.classList.add('active');
     }
   </script>
-
 </body>
 </html>
